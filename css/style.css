@@ -1,11 +1,32 @@
-body, h3, h1, p {
+body, h1, h2, h3, p {
   margin: 0;
   padding: 0;
+}
+
+main .textBox .textBoxContent button, header .about button {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: #ffffff;
+  padding-top: 3px;
+  font-weight: 800;
+  background: #998675;
+  width: 170px;
+  height: 50px;
+  border-radius: 4px;
+  border: none;
+  -webkit-box-shadow: 0 3px 0 0 #736357;
+          box-shadow: 0 3px 0 0 #736357;
+  outline: none;
+}
+main .textBox .textBoxContent button:active, header .about button:active {
+  outline: none;
 }
 
 .wrapper {
   width: 80%;
   margin: 0 auto;
+  height: 100%;
 }
 
 header {
@@ -33,6 +54,7 @@ header .logoAndMenu .logo {
 header .logoAndMenu .logo h3 {
   font-family: "Raleway", sans-serif;
   font-size: 34px;
+  font-weight: 400;
   color: #ffffff;
 }
 header .logoAndMenu .menu {
@@ -56,6 +78,7 @@ header .logoAndMenu .menu .navigation {
 header .logoAndMenu .menu .navigation a {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
+  font-weight: 300;
   color: #ffffff;
   text-decoration: none;
   -webkit-transition: 0.3s all;
@@ -81,42 +104,132 @@ header .about {
 header .about h3 {
   font-family: "Raleway", sans-serif;
   font-size: 36px;
+  font-weight: 500;
   color: #ffffff;
 }
 header .about h1 {
   font-family: "Raleway", sans-serif;
   font-size: 52px;
+  font-weight: 800;
   color: #ffffff;
   font-weight: 800;
 }
 header .about p {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
+  font-weight: 300;
   color: #ffffff;
   width: 80%;
   margin: 18px auto;
 }
 header .about button {
-  font-family: "Raleway", sans-serif;
-  font-size: 14px;
-  color: #ffffff;
-  padding-top: 3px;
-  font-weight: 800;
-  background: #998675;
-  width: 170px;
-  height: 50px;
   margin-top: 50px;
-  border-radius: 4px;
-  border: none;
-  -webkit-box-shadow: 0 3px 0 0 #736357;
-          box-shadow: 0 3px 0 0 #736357;
-  outline: none;
-}
-header .about button:active, header .about button:active {
-  outline: none;
 }
 
-main {
-  color: #fbfaf8;
+main .servicesAndRealizationOfIdeas {
   height: 1070px;
+  background: url(../images/realizationOfIdeasPhoto.jpg) no-repeat center bottom/80%;
+}
+main .servicesAndRealizationOfIdeas .services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 80px;
+}
+main .servicesAndRealizationOfIdeas .services div {
+  width: 240px;
+  text-align: center;
+  cursor: pointer;
+}
+main .servicesAndRealizationOfIdeas .services div h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #555555;
+  padding-top: 20px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+main .servicesAndRealizationOfIdeas .services div p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #9e9e9e;
+  padding-top: 15px;
+}
+main .servicesAndRealizationOfIdeas .services div:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  padding-top: 30px;
+  width: 60px;
+  border-bottom: 3px solid #c7b299;
+  opacity: 0.2;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+main .servicesAndRealizationOfIdeas .services div.isHover:after {
+  opacity: 1;
+}
+main .servicesAndRealizationOfIdeas .services div.isHover h2 {
+  color: #c7b299;
+}
+main .servicesAndRealizationOfIdeas .realizationOfIdeas {
+  margin-top: 140px;
+  text-align: center;
+}
+main .servicesAndRealizationOfIdeas .realizationOfIdeas h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #555555;
+}
+main .servicesAndRealizationOfIdeas .realizationOfIdeas p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #9e9e9e;
+  width: 650px;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+main .textBox {
+  background: url(../images/textBoxBackground.jpg) no-repeat center top/cover;
+  width: 100%;
+  height: 150px;
+}
+main .textBox .textBoxContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+}
+main .textBox .textBoxContent h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #ffffff;
+}
+main .textBox .textBoxContent span {
+  color: #c7b299;
+}
+main .textBox .textBoxContent h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #615855;
 }
