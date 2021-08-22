@@ -475,3 +475,315 @@ main .videoPresentation h3 {
   text-align: center;
   margin-top: 40px;
 }
+main .excellentForMobileDevices {
+  padding-top: 80px;
+  background-color: #fbfaf8;
+}
+main .excellentForMobileDevices .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+main .excellentForMobileDevices .container .phoneImage img {
+  display: block;
+}
+main .excellentForMobileDevices .container .textBlock {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 120px;
+}
+main .excellentForMobileDevices .container .textBlock h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #555555;
+}
+main .excellentForMobileDevices .container .textBlock p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #8c8c8c;
+  margin-top: 40px;
+  text-align: justify;
+  line-height: 25px;
+}
+main .excellentForMobileDevices .container .textBlock .features {
+  margin-top: 40px;
+  margin-left: 50px;
+}
+main .excellentForMobileDevices .container .textBlock .features .feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+  margin-top: 12px;
+}
+main .excellentForMobileDevices .container .textBlock .features .feature p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #9d9d9d;
+  white-space: nowrap;
+  margin: 0;
+}
+main .counters {
+  background: url(../images/countersBackground.jpg) no-repeat center top/cover;
+  height: 300px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 60px 0 30px 0;
+}
+main .counters .countersContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+}
+main .counters .countersContent .counter {
+  position: relative;
+  height: 100%;
+  text-align: center;
+}
+main .counters .countersContent .counter .numbers {
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-top: 25px;
+}
+main .counters .countersContent .counter p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #c7b299;
+  margin-top: 20px;
+}
+main .counters .countersContent .counter:after {
+  content: "";
+  width: 32px;
+  height: 2px;
+  background-color: #ffffff;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 16px);
+}
+main .recentPosts {
+  padding: 80px 0;
+}
+main .recentPosts .text {
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+main .recentPosts .text h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #555555;
+}
+main .recentPosts .text p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #9e9e9e;
+  margin-top: 25px;
+  line-height: 25px;
+}
+main .recentPosts .posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
+}
+main .recentPosts .posts .post {
+  width: 32%;
+  position: relative;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  padding-bottom: 30px;
+  cursor: pointer;
+}
+main .recentPosts .posts .post .postImage {
+  height: 200px;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+main .recentPosts .posts .post .postImage img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+main .recentPosts .posts .post .calendar {
+  position: absolute;
+  text-align: center;
+  left: 20px;
+  top: 20px;
+  overflow: hidden;
+  border-radius: 7px;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+main .recentPosts .posts .post .calendar .date {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: #ffffff;
+  width: 50px;
+  height: 35px;
+  background-color: #363636;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 4px;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+main .recentPosts .posts .post .calendar .month {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffffff;
+  width: 50px;
+  height: 25px;
+  background-color: #252525;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 6px;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+main .recentPosts .posts .post .postText {
+  width: 90%;
+  margin: 0 auto;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+main .recentPosts .posts .post .postText h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #555555;
+  margin-top: 30px;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+main .recentPosts .posts .post .postText p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #8c8c8c;
+  margin-top: 20px;
+  line-height: 23px;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+main .recentPosts .posts .post .postText .readMore {
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  gap: 10px;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+main .recentPosts .posts .post .postText .readMore p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #cfbda9;
+  margin: 0;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+main .recentPosts .posts .post .postText .readMore p:hover {
+  color: #e08614;
+}
+main .recentPosts .posts .post .postText .readMore img {
+  -o-object-fit: none;
+     object-fit: none;
+}
+main .recentPosts .posts .post.active {
+  /* hover upon click arrows */
+  background-color: #362f2d;
+}
+main .recentPosts .posts .post.active .postImage img {
+  -webkit-filter: opacity(20%);
+          filter: opacity(20%);
+}
+main .recentPosts .posts .post.active .calendar .date {
+  background-color: #c7b299;
+  color: #ffffff;
+}
+main .recentPosts .posts .post.active .calendar .month {
+  background-color: #a48d72;
+  color: #ffffff;
+}
+main .recentPosts .posts .post.active .postText h3 {
+  color: #c7b299;
+}
+main .recentPosts .posts .post.active .postText p {
+  color: #ffffff;
+}
+main .recentPosts .changeButtons {
+  text-align: center;
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main .recentPosts .changeButtons .changeButton {
+  position: relative;
+  cursor: pointer;
+}
+main .recentPosts .changeButtons .changeButton img {
+  padding: 0 10px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  margin-top: 5px;
+}
+main .recentPosts .changeButtons .changeButton:after {
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  content: "";
+  display: block;
+  position: absolute;
+  left: calc(50%);
+  top: calc(50%);
+  width: 0;
+  height: 0;
+}
+main .recentPosts .changeButtons .changeButton:hover img {
+  -webkit-filter: opacity(30%);
+          filter: opacity(30%);
+}
+main .recentPosts .changeButtons .changeButton:hover:after {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  left: calc(50% - 20px);
+  top: calc(50% - 20px);
+}
