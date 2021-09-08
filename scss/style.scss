@@ -34,7 +34,7 @@ $fontRoboto: 'Roboto', sans-serif;
     }
 }
 
-body, h1, h2, h3, p {
+body, h1, h2, h3, h6, p {
     @extend %removeDefaultIndentation;
 }
 
@@ -49,6 +49,7 @@ header {
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/backgroundPhoto.jpg) no-repeat center top / cover;
 
     .logoAndMenu {
+
         display: flex;
         justify-content: space-between;
         padding-top: 40px;
@@ -719,7 +720,205 @@ main {
             }
         }
     }
+
+    .partners {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/partnersBackground.jpg) no-repeat center center / cover;
+        padding: 140px 0;
+
+        .partnersLogo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
 }
+
+footer {
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+        background-color: #191919;
+        padding: 80px 30px;
+
+        .aboutWaxom {
+            .logo {
+                display: flex;
+                align-items: center;
+                padding-bottom: 20px;
+
+                h3 {
+                    @include createFont($fontRaleway, 34px, #ffffff, 400);
+                    padding: 0;
+                }
+            }
+
+            p {
+                color: #555555;
+            }
+
+            .readMore {
+                margin-top: 25px;
+                display: flex;
+                align-items: baseline;
+                gap: 10px;
+                cursor: pointer;
+                transition: 0.3s all;
+
+                p {
+                    @include createFont($fontMontserrat, 14px, #d1d1d1, 300);
+                    transition: inherit;
+                }
+
+                img {
+                    object-fit: none;
+                    filter: grayscale(1);
+                    transition: 0.3s all;
+                }
+
+                &:hover {
+                    p {
+                        color: #898989;
+                    }
+                    img {
+                        filter: grayscale(0);
+                    }
+                }
+            }
+        }
+
+        .recentPostsInfo {
+            .datesOfInfo {
+                .date {
+                    cursor: pointer;
+                    transition: 0.3s all;
+
+                    h6 {
+                        @include createFont($fontMontserrat, 12px, #363636, 300);
+                        transition: inherit;
+                    }
+
+                    p {
+                        @include createFont($fontMontserrat, 14px, #4f4f4f, 300);
+                        transition: inherit;
+                    }
+
+                    &:hover {
+                        h6 {
+                            color: #d3d3d3;
+                        }
+
+                        p {
+                            color: #c7b299;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ourTwitter {
+            .textBlock {
+                h6 {
+                    @include createFont($fontMontserrat, 12px, #363636, 300);
+
+                }
+
+                p {
+                    @include createFont($fontMontserrat, 14px, #4f4f4f, 300);
+
+                    span {
+                        color: #00bff3;
+                        cursor: pointer;
+                        transition: 0.2s color;
+
+                        &:hover {
+                            color: #007192;
+                        }
+                    }
+
+                    span.link {
+                        color: #959595;
+                    }
+                }
+            }
+        }
+
+        .widgets {
+            .widgetImages {
+                display: grid;
+                grid-template-columns: auto auto;
+                justify-content: start;
+                gap: 5px;
+
+                img {
+                    width: 130px;
+                    height: 100px;
+                    transition: 0.3s all;
+
+                    &:hover {
+                        cursor: pointer;
+                        filter: opacity(0.3);
+                    }
+                }
+            }
+        }
+
+        hr {
+            border: none;
+            color: #252525;
+            background-color: #252525;
+            height: 1px;
+            margin: 15px 0;
+        }
+
+        h3 {
+            @include createFont($fontRaleway, 24px, #ffffff, 700);
+            padding-bottom: 30px;
+        }
+
+        p {
+            line-height: 25px;
+        }
+    }
+
+    .footer {
+        background-color: #111111;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

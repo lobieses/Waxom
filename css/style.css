@@ -1,4 +1,4 @@
-body, h1, h2, h3, p {
+body, h1, h2, h3, h6, p {
   margin: 0;
   padding: 0;
 }
@@ -786,4 +786,177 @@ main .recentPosts .changeButtons .changeButton:hover:after {
   border-radius: 50%;
   left: calc(50% - 20px);
   top: calc(50% - 20px);
+}
+main .partners {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../images/partnersBackground.jpg) no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/partnersBackground.jpg) no-repeat center center/cover;
+  padding: 140px 0;
+}
+main .partners .partnersLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  background-color: #191919;
+  padding: 80px 30px;
+}
+footer .info .aboutWaxom .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 20px;
+}
+footer .info .aboutWaxom .logo h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 34px;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 0;
+}
+footer .info .aboutWaxom p {
+  color: #555555;
+}
+footer .info .aboutWaxom .readMore {
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  gap: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+footer .info .aboutWaxom .readMore p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #d1d1d1;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+footer .info .aboutWaxom .readMore img {
+  -o-object-fit: none;
+     object-fit: none;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+footer .info .aboutWaxom .readMore:hover p {
+  color: #898989;
+}
+footer .info .aboutWaxom .readMore:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+footer .info .recentPostsInfo .datesOfInfo .date {
+  cursor: pointer;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+footer .info .recentPostsInfo .datesOfInfo .date h6 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #363636;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+footer .info .recentPostsInfo .datesOfInfo .date p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #4f4f4f;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+footer .info .recentPostsInfo .datesOfInfo .date:hover h6 {
+  color: #d3d3d3;
+}
+footer .info .recentPostsInfo .datesOfInfo .date:hover p {
+  color: #c7b299;
+}
+footer .info .ourTwitter .textBlock h6 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #363636;
+}
+footer .info .ourTwitter .textBlock p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #4f4f4f;
+}
+footer .info .ourTwitter .textBlock p span {
+  color: #00bff3;
+  cursor: pointer;
+  -webkit-transition: 0.2s color;
+  transition: 0.2s color;
+}
+footer .info .ourTwitter .textBlock p span:hover {
+  color: #007192;
+}
+footer .info .ourTwitter .textBlock p span.link {
+  color: #959595;
+}
+footer .info .widgets .widgetImages {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 5px auto;
+  grid-template-columns: auto auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 5px;
+}
+footer .info .widgets .widgetImages img {
+  width: 130px;
+  height: 100px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+footer .info .widgets .widgetImages img:hover {
+  cursor: pointer;
+  -webkit-filter: opacity(0.3);
+          filter: opacity(0.3);
+}
+footer .info hr {
+  border: none;
+  color: #252525;
+  background-color: #252525;
+  height: 1px;
+  margin: 15px 0;
+}
+footer .info h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  padding-bottom: 30px;
+}
+footer .info p {
+  line-height: 25px;
+}
+footer .footer {
+  background-color: #111111;
 }
