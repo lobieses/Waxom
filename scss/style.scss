@@ -881,8 +881,38 @@ footer {
         }
     }
 
-    .footer {
+    .copyright {
         background-color: #111111;
+        padding: 45px 10%;
+        @include createFont($fontMontserrat, 13px, #555555, 300);
+
+        .help {
+            a {
+                @include createFont($fontMontserrat, 13px, #555555, 300);
+                text-decoration: none;
+                transition: 0.3s all;
+
+                &:hover {
+                    color: #c7b299;
+                }
+            }
+        }
+
+        &, .help, .autors {   //common styles
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                span {
+                    color: #959595;
+                }
+            }
+
+            .verticalLine {
+                border-right: 1px solid #202020;
+                margin: 0 10px;
+            }
+        }
     }
 }
 

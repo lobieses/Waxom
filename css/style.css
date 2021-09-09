@@ -957,6 +957,38 @@ footer .info h3 {
 footer .info p {
   line-height: 25px;
 }
-footer .footer {
+footer .copyright {
   background-color: #111111;
+  padding: 45px 10%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #555555;
+}
+footer .copyright .help a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #555555;
+  text-decoration: none;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+footer .copyright .help a:hover {
+  color: #c7b299;
+}
+footer .copyright, footer .copyright .help, footer .copyright .autors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .copyright p span, footer .copyright .help p span, footer .copyright .autors p span {
+  color: #959595;
+}
+footer .copyright .verticalLine, footer .copyright .help .verticalLine, footer .copyright .autors .verticalLine {
+  border-right: 1px solid #202020;
+  margin: 0 10px;
 }
