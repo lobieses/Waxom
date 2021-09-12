@@ -38,6 +38,24 @@ header {
   height: 100vh;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../images/backgroundPhoto.jpg) no-repeat center top/cover;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/backgroundPhoto.jpg) no-repeat center top/cover;
+  position: relative;
+  overflow: hidden;
+}
+header:before {
+  display: block;
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 0;
+  height: 0;
+  -webkit-transition: 0.3s background-color;
+  transition: 0.3s background-color;
+}
+header.active:before {
+  background-color: black;
+  opacity: 0.3;
+  width: 100%;
+  height: 100vh;
 }
 header .logoAndMenu {
   display: -webkit-box;
@@ -69,9 +87,19 @@ header .logoAndMenu .menu {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 60px;
 }
-header .logoAndMenu .menu .navigation {
+header .logoAndMenu .menu .menuContainer {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 60px;
+  overflow-x: visible;
+}
+header .logoAndMenu .menu .menuContainer .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,26 +108,75 @@ header .logoAndMenu .menu .navigation {
           align-items: center;
   gap: 28px;
 }
-header .logoAndMenu .menu .navigation a {
+header .logoAndMenu .menu .menuContainer .navigation a {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: calc(10px + 4 * ((100vw - 320px) / 960));
   font-weight: 300;
   color: #ffffff;
   text-decoration: none;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
-header .logoAndMenu .menu .navigation a:hover {
+header .logoAndMenu .menu .menuContainer .navigation a:hover {
   color: #baa790;
 }
-header .logoAndMenu .menu .cartAndSearch {
+header .logoAndMenu .menu .menuContainer .cartAndSearch {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 25px;
 }
-header .logoAndMenu .menu .cartAndSearch img {
+header .logoAndMenu .menu .menuContainer .cartAndSearch img {
   cursor: pointer;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+header .logoAndMenu .menu .menuContainer .cartAndSearch img:hover {
+  -webkit-filter: opacity(0.3);
+          filter: opacity(0.3);
+}
+header .logoAndMenu .menu .burger {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  display: none;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+header .logoAndMenu .menu .burger:after, header .logoAndMenu .menu .burger:before {
+  content: "";
+  background-color: #ffffff;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+header .logoAndMenu .menu .burger:before {
+  top: calc(100% - 2px);
+}
+header .logoAndMenu .menu .burger span {
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: calc(50% - 1px);
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+header .logoAndMenu .menu.active .burger span {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+header .logoAndMenu .menu.active .burger:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 50%;
+}
+header .logoAndMenu .menu.active .burger:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: calc(50% - 2px);
 }
 header .about {
   margin: 240px auto;
@@ -108,27 +185,28 @@ header .about {
 }
 header .about h3 {
   font-family: "Raleway", sans-serif;
-  font-size: 36px;
+  font-size: calc(16px + 20 * ((100vw - 320px) / 960));
   font-weight: 500;
   color: #ffffff;
 }
 header .about h1 {
   font-family: "Raleway", sans-serif;
-  font-size: 52px;
+  font-size: calc(24px + 28 * ((100vw - 320px) / 960));
   font-weight: 800;
   color: #ffffff;
   font-weight: 800;
 }
 header .about p {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: calc(10px + 6 * (100vw / 1280));
   font-weight: 300;
   color: #ffffff;
   width: 80%;
   margin: 18px auto;
+  line-height: 25px;
 }
 header .about button {
-  margin-top: 50px;
+  margin-top: 20%;
 }
 
 main .servicesAndRealizationOfIdeas {

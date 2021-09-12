@@ -9,6 +9,19 @@ $fontRoboto: 'Roboto', sans-serif;
     color: $color;
 }
 
+@mixin createAdaptiveFont($family, $pcSize, $mobSize, $color, $font-weight) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: 1280 - 320;
+
+    font-family: $family;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+    font-weight: $font-weight;
+    color: $color;
+}
+
+
+
+
 %removeDefaultIndentation {
     margin: 0;
     padding: 0;
@@ -47,9 +60,29 @@ body, h1, h2, h3, h6, p {
 header {
     height: 100vh;
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/backgroundPhoto.jpg) no-repeat center top / cover;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 0;
+        height: 0;
+        transition: 0.3s background-color;
+    }
+
+    &.active {
+        &:before {
+            background-color: black;
+            opacity: 0.3;
+            width: 100%;
+            height: 100vh;
+        }
+    }
 
     .logoAndMenu {
-
         display: flex;
         justify-content: space-between;
         padding-top: 40px;
@@ -66,30 +99,90 @@ header {
         .menu {
             display: flex;
             align-items: center;
-            gap: 60px;
 
-            .navigation {
+            .menuContainer {
+                height: 100%;
                 display: flex;
                 align-items: center;
-                gap: 28px;
+                gap: 60px;
+                overflow-x: visible;
 
-                a {
-                    @include createFont($fontMontserrat, 14px, #ffffff, 300);
-                    text-decoration: none;
-                    transition: 0.3s all;
+                .navigation {
+                    display: flex;
+                    align-items: center;
+                    gap: 28px;
 
-                    &:hover {
-                        color: #baa790;
+                    a {
+                        @include createAdaptiveFont($fontMontserrat, 14, 10, #ffffff, 300);
+                        text-decoration: none;
+                        transition: 0.3s all;
+
+                        &:hover {
+                            color: #baa790;
+                        }
+                    }
+                }
+
+                .cartAndSearch {
+                    display: flex;
+                    gap: 25px;
+
+                    img {
+                        cursor: pointer;
+                        transition: 0.3s all;
+
+                        &:hover {
+                            filter: opacity(0.3);
+                        }
                     }
                 }
             }
 
-            .cartAndSearch {
-                display: flex;
-                gap: 25px;
+            .burger {
+                width: 30px;
+                height: 20px;
+                position: relative;
+                display: none;
+                transition: 0.3s all;
 
-                img {
-                    cursor: pointer;
+                &:after, &:before {             //bottom and top lines of burgetMenu
+                    content: '';
+                    background-color: #ffffff;
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    transition: 0.3s all;
+                }
+
+                &:before {
+                    top: calc(100% - 2px);
+                }
+
+                span {                        //middle line of burgerMenu
+                    background-color: #fff;
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    top: calc(50% - 1px);
+                    transition: inherit;
+                }
+            }
+
+            &.active {
+                .burger {
+                    span {
+                        transform: scale(0);
+                    }
+
+                    &:before {
+                        transform: rotate(45deg);
+                        top: 50%;
+                    }
+
+                    &:after {
+                        transform: rotate(-45deg);
+                        bottom: calc(50% - 2px);
+                    }
                 }
             }
         }
@@ -101,23 +194,24 @@ header {
         text-align: center;
 
         h3 {
-            @include createFont($fontRaleway, 36px, #ffffff, 500);
+            @include createAdaptiveFont($fontRaleway, 36, 16, #ffffff, 500);
         }
 
         h1 {
-            @include createFont($fontRaleway, 52px, #ffffff, 800);
+            @include createAdaptiveFont($fontRaleway, 52, 24, #ffffff, 800);
             font-weight: 800;
         }
 
         p {
-            @include createFont($fontMontserrat, 16px, #ffffff, 300);
+            @include createFont($fontMontserrat, calc(10px + 6 * (100vw / 1280)), #ffffff, 300);
             width: 80%;
             margin: 18px auto;
+            line-height: 25px;
         }
 
         button {
             @extend %styleForButtons;
-            margin-top: 50px;
+            margin-top: 20%;
         }
     }
 }
@@ -128,7 +222,7 @@ main {
         background: url(../images/realizationOfIdeasPhoto.jpg) no-repeat center bottom/80%;
 
         .services {
-            display: flex;
+             display: flex;
             align-items: flex-end;
             justify-content: space-between;
 

@@ -1,12 +1,12 @@
-const toggleClass = (activeElemsWay, className, addClassElem) => {
-    $(activeElemsWay).removeClass(className);
+const toggleClassBetweenElems = (activeElemsWayForRemoveClass, className, addClassElem) => {
+    $(activeElemsWayForRemoveClass).removeClass(className);
     addClassElem.classList.add(className);
 }
 
 const toggle = (elems, className, activeElemsWay) => {
     for(let elem of elems) {
         elem.addEventListener('click', (event) => {
-            toggleClass(activeElemsWay, className, event.currentTarget);
+            toggleClassBetweenElems(activeElemsWay, className, event.currentTarget);
         });
     }
 }
@@ -17,7 +17,7 @@ const changeClassUponArrowsClickAndClicking = (elems, buttons, activeElemsWay, c
     for(let elem of elems) {
         elem.addEventListener('click', (event) => {
             indexNumberOfActiveElem = event.currentTarget.dataset.num;
-            toggleClass(activeElemsWay, className, elems[indexNumberOfActiveElem]);
+            toggleClassBetweenElems(activeElemsWay, className, elems[indexNumberOfActiveElem]);
         });
     }
 
@@ -27,7 +27,7 @@ const changeClassUponArrowsClickAndClicking = (elems, buttons, activeElemsWay, c
         } else {
             indexNumberOfActiveElem--;
         }
-        toggleClass(activeElemsWay, className, elems[indexNumberOfActiveElem]);
+        toggleClassBetweenElems(activeElemsWay, className, elems[indexNumberOfActiveElem]);
     });
 
     buttons[1].addEventListener('click', () => {
@@ -37,14 +37,46 @@ const changeClassUponArrowsClickAndClicking = (elems, buttons, activeElemsWay, c
             indexNumberOfActiveElem++;
         }
 
-        toggleClass(activeElemsWay, className, elems[indexNumberOfActiveElem]);
+        toggleClassBetweenElems(activeElemsWay, className, elems[indexNumberOfActiveElem]);
     });
 }
 
-const posts = document.querySelectorAll('.recentPosts .posts .post')
-const buttons = document.querySelectorAll('.recentPosts .changeButtons .changeButton')
+const toggleClassOfAllElems = (className, $elems, triggerElems) => {
+    triggerElems.addEventListener('click', () => {
+        for(let elem of $elems) {
+            elem.toggleClass(className)
+        }
+    });
+}
+
+const links = document.getElementsByClassName('navigation')[0].children;
+
+for(let link of links) {
+    let hrefOfLink = link.getAttribute('href');
+    if(hrefOfLink != '#') {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            if($('header').hasClass('active')) {          //hide menu
+                $('header').removeClass('active');
+                $('.menu').removeClass('active');
+            }
+
+            let elemToScrolling = document.getElementsByClassName(hrefOfLink.split('').slice(1).join(''))[0];
+            elemToScrolling.scrollIntoView({
+                behavior: "smooth",
+                block: 'start'
+            });
+        });
+    }
+}
+
+const posts = document.querySelectorAll('.recentPosts .posts .post');
+const buttons = document.querySelectorAll('.recentPosts .changeButtons .changeButton');
 
 changeClassUponArrowsClickAndClicking(posts, buttons, '.recentPosts .posts .post.active', 'active');
 toggle(document.querySelectorAll('.filters button'), 'active', '.filters button.active'); //function for projects filters
+toggleClassOfAllElems ('active', [$('header'), $('.menu')], document.getElementsByClassName('burger')[0])
+
+
 
 
