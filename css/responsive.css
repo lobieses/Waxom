@@ -10,6 +10,19 @@
     gap: 20px;
   }
 }
+@media (max-width: 1090px) {
+  main .servicesAndRealizationOfIdeas .services {
+    -ms-grid-columns: auto auto;
+    grid-template-columns: auto auto;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    grid-row-gap: 30px;
+  }
+  main .servicesAndRealizationOfIdeas .realizationOfIdeas {
+    margin-top: 8vw;
+  }
+}
 @media (max-width: 960px) {
   header .logoAndMenu .menu .menuContainer {
     position: absolute;
@@ -48,6 +61,28 @@
   header .about {
     margin: 120px auto;
     width: 95%;
+  }
+}
+@media (max-width: 560px) {
+  main .servicesAndRealizationOfIdeas .services {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+  }
+  main .servicesAndRealizationOfIdeas .services div img {
+    width: 10%;
+    height: 10%;
+  }
+  main .servicesAndRealizationOfIdeas .realizationOfIdeas {
+    margin-top: 15vw;
+  }
+  main .textBox {
+    text-align: center;
+  }
+  main .textBox .textBoxContent {
+    display: block;
+  }
+  main .textBox .textBoxContent div {
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 320px) {

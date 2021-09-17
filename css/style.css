@@ -198,7 +198,7 @@ header .about h1 {
 }
 header .about p {
   font-family: "Montserrat", sans-serif;
-  font-size: calc(10px + 6 * (100vw / 1280));
+  font-size: calc(10px + 6 * ((100vw - 320px) / 960));
   font-weight: 300;
   color: #ffffff;
   width: 80%;
@@ -210,29 +210,31 @@ header .about button {
 }
 
 main .servicesAndRealizationOfIdeas {
-  height: 1070px;
   background: url(../images/realizationOfIdeasPhoto.jpg) no-repeat center bottom/80%;
+  padding-bottom: 40vw;
 }
 main .servicesAndRealizationOfIdeas .services {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  grid-column-gap: 10px;
   padding-top: 80px;
 }
 main .servicesAndRealizationOfIdeas .services div {
-  width: 240px;
   text-align: center;
   cursor: pointer;
 }
 main .servicesAndRealizationOfIdeas .services div h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 22px;
+  font-size: calc(14px + 8 * ((100vw - 320px) / 960));
   font-weight: 600;
   color: #555555;
   padding-top: 20px;
@@ -241,10 +243,12 @@ main .servicesAndRealizationOfIdeas .services div h2 {
 }
 main .servicesAndRealizationOfIdeas .services div p {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: calc(10px + 4 * ((100vw - 320px) / 960));
   font-weight: 300;
   color: #9e9e9e;
   padding-top: 15px;
+  width: 70%;
+  margin: 0 auto;
 }
 main .servicesAndRealizationOfIdeas .services div:after {
   content: "";
@@ -264,28 +268,28 @@ main .servicesAndRealizationOfIdeas .services div:hover h2 {
   color: #c7b299;
 }
 main .servicesAndRealizationOfIdeas .realizationOfIdeas {
-  margin-top: 140px;
+  margin-top: 5vw;
   text-align: center;
 }
 main .servicesAndRealizationOfIdeas .realizationOfIdeas h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 30px;
+  font-size: calc(17px + 13 * ((100vw - 320px) / 960));
   font-weight: 600;
   color: #555555;
 }
 main .servicesAndRealizationOfIdeas .realizationOfIdeas p {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: calc(12px + 4 * ((100vw - 320px) / 960));
   font-weight: 300;
   color: #9e9e9e;
-  width: 650px;
+  width: 70%;
   margin: 0 auto;
   padding-top: 15px;
 }
 main .textBox {
   background: url(../images/textBoxBackground.jpg) no-repeat center top/cover;
   width: 100%;
-  height: 150px;
+  padding: 40px 0;
 }
 main .textBox .textBoxContent {
   display: -webkit-box;
@@ -303,7 +307,7 @@ main .textBox .textBoxContent {
 }
 main .textBox .textBoxContent h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 28px;
+  font-size: calc(18px + 10 * ((100vw - 320px) / 960));
   font-weight: 400;
   color: #ffffff;
 }
@@ -312,7 +316,7 @@ main .textBox .textBoxContent span {
 }
 main .textBox .textBoxContent h3 {
   font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+  font-size: calc(13px + 5 * ((100vw - 320px) / 960));
   font-weight: 300;
   color: #615855;
 }

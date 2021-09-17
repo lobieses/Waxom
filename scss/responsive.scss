@@ -23,12 +23,26 @@
 
 }
 
+@media (max-width: 1090px) {
+    main {
+        .servicesAndRealizationOfIdeas {
+            .services {
+                grid-template-columns: auto auto;
+                justify-content: space-evenly;
+                grid-row-gap: 30px;
+            }
+
+            .realizationOfIdeas {
+                margin-top: 8vw;
+            }
+        }
+    }
+}
+
 @media (max-width: 960px) {
 
     header {
         .logoAndMenu {
-
-
 
             .menu {
 
@@ -75,8 +89,50 @@
         }
     }
 
+    main {
+        .servicesAndRealizationOfIdeas {
+            .services {
+
+            }
+        }
+    }
+
 
 }
+
+@media (max-width: 560px) {
+    main {
+        .servicesAndRealizationOfIdeas {
+            .services {
+                grid-template-columns: auto;
+
+                div {
+                    img {
+                        width: 10%;
+                        height: 10%;
+                    }
+                }
+            }
+            .realizationOfIdeas {
+                margin-top: 15vw;
+            }
+        }
+
+        .textBox {
+            text-align: center;
+
+            .textBoxContent {
+                display: block;
+
+                div {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+    }
+}
+
 
 @media (max-width: 320px) {
 

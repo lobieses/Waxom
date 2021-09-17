@@ -203,7 +203,7 @@ header {
         }
 
         p {
-            @include createFont($fontMontserrat, calc(10px + 6 * (100vw / 1280)), #ffffff, 300);
+            @include createAdaptiveFont($fontMontserrat, 16, 10, #ffffff, 300);
             width: 80%;
             margin: 18px auto;
             line-height: 25px;
@@ -218,30 +218,33 @@ header {
 
 main {
     .servicesAndRealizationOfIdeas {
-        height: 1070px;
         background: url(../images/realizationOfIdeasPhoto.jpg) no-repeat center bottom/80%;
+        padding-bottom: 40vw; //place for bottom image
 
         .services {
-             display: flex;
-            align-items: flex-end;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-items: center;
+            align-items: baseline;
             justify-content: space-between;
-
+            grid-column-gap: 10px;
             padding-top: 80px;
 
             div {
-                width: 240px;
                 text-align: center;
                 cursor: pointer;
 
                 h2 {
-                    @include createFont($fontRaleway, 22px, #555555, 600);
+                    @include createAdaptiveFont($fontRaleway, 22, 14, #555555, 600);
                     padding-top: 20px;
                     transition: 0.3s all;
                 }
 
                 p {
-                    @include createFont($fontMontserrat, 14px, #9e9e9e, 300);
+                    @include createAdaptiveFont($fontMontserrat, 14, 10, #9e9e9e, 300);
                     padding-top: 15px;
+                    width: 70%;
+                    margin: 0 auto;
                 }
 
                 &:after {
@@ -268,16 +271,16 @@ main {
         }
 
         .realizationOfIdeas {
-            margin-top: 140px;
+            margin-top: 5vw;
             text-align: center;
 
             h2 {
-                @include createFont($fontRaleway, 30px, #555555, 600);
+                @include createAdaptiveFont($fontRaleway, 30, 17, #555555, 600);
             }
 
             p {
-                @include createFont($fontMontserrat, 16px, #9e9e9e, 300);
-                width: 650px;
+                @include createAdaptiveFont($fontMontserrat, 16, 12, #9e9e9e, 300);
+                width: 70%;
                 margin: 0 auto;
                 padding-top: 15px;
             }
@@ -287,7 +290,7 @@ main {
     .textBox {
         background: url(../images/textBoxBackground.jpg) no-repeat center top/cover;
         width: 100%;
-        height: 150px;
+        padding: 40px 0;
 
         .textBoxContent {
             display: flex;
@@ -298,7 +301,7 @@ main {
             height: 100%;
 
             h2 {
-                @include createFont($fontRaleway, 28px, #ffffff, 400);
+                @include createAdaptiveFont($fontRaleway, 28, 18, #ffffff, 400);
             }
 
             span {
@@ -306,7 +309,7 @@ main {
             }
 
             h3 {
-                @include createFont($fontMontserrat, 18px, #615855, 300);
+                @include createAdaptiveFont($fontMontserrat, 18, 13, #615855, 300);
             }
 
             button {
