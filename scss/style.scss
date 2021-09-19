@@ -323,21 +323,26 @@ main {
         text-align: center;
 
         h2 {
-            @include createFont($fontRaleway, 30px, #555555, 600);
+            @include createAdaptiveFont($fontRaleway, 30, 20, #555555, 600);
         }
 
         p {
-            @include createFont($fontMontserrat, 16px, #9e9e9e, 300);
+            @include createAdaptiveFont($fontMontserrat, 16, 12, #9e9e9e, 300);
             margin: 30px auto;
             width: 80%;
         }
 
         .filters {
             margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            flex-wrap: wrap;
 
             button {
-                @include createFont($fontMontserrat, 14px, #9e9e9e, 300);
+                @include createAdaptiveFont($fontMontserrat, 14, 12, #9e9e9e, 300);
                 height: 30px;
+                min-width: 115px;
                 border: 1px solid #ebebeb;
                 border-radius: 4px;
                 background: none;
@@ -355,14 +360,16 @@ main {
 
         .projects {
             display: grid;
-            grid-template-columns: 320px 320px 320px;
+            grid-template-columns: auto auto auto;
             justify-items: center;
             justify-content: center;
             grid-gap: 30px;
             margin-top: 40px;
 
             .project {
+                width: 320px;
                 height: 320px;
+
                 position: relative;
 
                 .searchBackground {
@@ -371,11 +378,13 @@ main {
                 }
 
                 .projectPhoto {
+                    height: 68%;
+
                     img {
                         display: block;
                         object-fit: cover;
-                        width: 320px;
-                        height: 220px;
+                        width: 100%;
+                        height: 100%;
                         transition: 0.3s all;
                     }
                 }
@@ -404,11 +413,11 @@ main {
                     }
 
                     h3 {
-                        @include createFont($fontRaleway, 20px, #c7b299, 500);
+                        @include createAdaptiveFont($fontRaleway, 20, 16, #c7b299, 500);
                     }
 
                     p {
-                        @include createFont($fontMontserrat, 14px, #d1d1d1, 300);
+                        @include createAdaptiveFont($fontMontserrat, 14, 11, #d1d1d1, 300);
                         margin: 10px 0 0 0;
                     }
                 }
@@ -423,7 +432,7 @@ main {
                         width: 100%;
                         height: 100%;
                         box-sizing: border-box;
-                        padding-top: 100px;
+                        padding-top: calc(34% - 14px);
                         z-index: 3;
 
                         img {
@@ -509,20 +518,20 @@ main {
         }
         h2
         {
-            @include createFont($fontRaleway, 30px, #ffffff, 500);
+            @include createAdaptiveFont($fontRaleway, 30, 26, #ffffff, 500);
             margin-top: 40px;
             text-align: center;
         }
 
         p {
-            @include createFont($fontMontserrat, 16px, #dfe0e1, 300);
+            @include createAdaptiveFont($fontMontserrat, 16, 14, #dfe0e1, 300);
             width: 65%;
             margin: 30px auto 0 auto;
             text-align: center;
         }
 
         h3 {
-            @include createFont($fontMontserrat, 14px, #c2ae96, 400);
+            @include createAdaptiveFont($fontMontserrat, 14, 12, #c2ae96, 400);
             cursor: pointer;
             text-align: center;
             margin-top: 40px;

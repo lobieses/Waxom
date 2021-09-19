@@ -326,13 +326,13 @@ main .latestProjects {
 }
 main .latestProjects h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 30px;
+  font-size: calc(20px + 10 * ((100vw - 320px) / 960));
   font-weight: 600;
   color: #555555;
 }
 main .latestProjects p {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: calc(12px + 4 * ((100vw - 320px) / 960));
   font-weight: 300;
   color: #9e9e9e;
   margin: 30px auto;
@@ -340,13 +340,23 @@ main .latestProjects p {
 }
 main .latestProjects .filters {
   margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 main .latestProjects .filters button {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: calc(12px + 2 * ((100vw - 320px) / 960));
   font-weight: 300;
   color: #9e9e9e;
   height: 30px;
+  min-width: 115px;
   border: 1px solid #ebebeb;
   border-radius: 4px;
   background: none;
@@ -363,8 +373,8 @@ main .latestProjects .filters button:hover, main .latestProjects .filters button
 main .latestProjects .projects {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 320px 30px 320px 30px 320px;
-  grid-template-columns: 320px 320px 320px;
+  -ms-grid-columns: auto 30px auto 30px auto;
+  grid-template-columns: auto auto auto;
   justify-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -373,6 +383,7 @@ main .latestProjects .projects {
   margin-top: 40px;
 }
 main .latestProjects .projects .project {
+  width: 320px;
   height: 320px;
   position: relative;
 }
@@ -381,12 +392,15 @@ main .latestProjects .projects .project .searchBackground {
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
+main .latestProjects .projects .project .projectPhoto {
+  height: 68%;
+}
 main .latestProjects .projects .project .projectPhoto img {
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 320px;
-  height: 220px;
+  width: 100%;
+  height: 100%;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
@@ -418,13 +432,13 @@ main .latestProjects .projects .project .lowerBackground:before {
 }
 main .latestProjects .projects .project .lowerBackground h3 {
   font-family: "Raleway", sans-serif;
-  font-size: 20px;
+  font-size: calc(16px + 4 * ((100vw - 320px) / 960));
   font-weight: 500;
   color: #c7b299;
 }
 main .latestProjects .projects .project .lowerBackground p {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: calc(11px + 3 * ((100vw - 320px) / 960));
   font-weight: 300;
   color: #d1d1d1;
   margin: 10px 0 0 0;
@@ -445,7 +459,7 @@ main .latestProjects .projects .project:hover .searchBackground {
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-top: 100px;
+  padding-top: calc(34% - 14px);
   z-index: 3;
 }
 main .latestProjects .projects .project:hover .searchBackground img {
@@ -533,7 +547,7 @@ main .videoPresentation .playIconContainer .playIcon:hover img {
 }
 main .videoPresentation h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 30px;
+  font-size: calc(26px + 4 * ((100vw - 320px) / 960));
   font-weight: 500;
   color: #ffffff;
   margin-top: 40px;
@@ -541,7 +555,7 @@ main .videoPresentation h2 {
 }
 main .videoPresentation p {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 960));
   font-weight: 300;
   color: #dfe0e1;
   width: 65%;
@@ -550,7 +564,7 @@ main .videoPresentation p {
 }
 main .videoPresentation h3 {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: calc(12px + 2 * ((100vw - 320px) / 960));
   font-weight: 400;
   color: #c2ae96;
   cursor: pointer;
