@@ -107,12 +107,25 @@
                 width: 100%;
                 margin: 10px auto;
             }
+        }
 
+        .excellentForMobileDevices {
+            .container {
+                .phoneImage {
+                    display: none;
+                }
+
+                .textBlock {
+                    padding: 0 0 40px 0;
+                    text-align: center;
+
+                    .features {
+                        margin-left: 10%;
+                    }
+                }
+            }
         }
     }
-
-
-
 }
 
 
@@ -176,6 +189,16 @@
                 grid-template-columns: auto;
 
 
+            }
+        }
+
+        .excellentForMobileDevices {
+            .container {
+                .textBlock {
+                    .features {
+                        margin-left: 0;
+                    }
+                }
             }
         }
 

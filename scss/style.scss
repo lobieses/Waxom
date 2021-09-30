@@ -555,15 +555,16 @@ main {
             }
 
             .textBlock {
+
                 box-sizing: border-box;
                 padding-top: 120px;
 
                 h2 {
-                    @include createFont($fontRaleway, 30px, #555555, 600);
+                    @include createAdaptiveFont($fontRaleway, 30, 20, #555555, 600);
                 }
 
                 p {
-                    @include createFont($fontMontserrat, 16px, #8c8c8c, 300);
+                    @include createAdaptiveFont($fontMontserrat, 16, 10, #8c8c8c, 300);
                     margin-top: 40px;
                     text-align: justify;
                     line-height: 25px;
@@ -580,8 +581,7 @@ main {
                         margin-top: 12px;
 
                         p {
-                            @include createFont($fontMontserrat, 16px, #9d9d9d, 300);
-                            white-space: nowrap;
+                            @include createAdaptiveFont($fontMontserrat, 16, 10, #9d9d9d, 300);
                             margin: 0;
                         }
                     }

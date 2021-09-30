@@ -594,13 +594,13 @@ main .excellentForMobileDevices .container .textBlock {
 }
 main .excellentForMobileDevices .container .textBlock h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 30px;
+  font-size: calc(20px + 10 * ((100vw - 320px) / 960));
   font-weight: 600;
   color: #555555;
 }
 main .excellentForMobileDevices .container .textBlock p {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: calc(10px + 6 * ((100vw - 320px) / 960));
   font-weight: 300;
   color: #8c8c8c;
   margin-top: 40px;
@@ -623,10 +623,9 @@ main .excellentForMobileDevices .container .textBlock .features .feature {
 }
 main .excellentForMobileDevices .container .textBlock .features .feature p {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: calc(10px + 6 * ((100vw - 320px) / 960));
   font-weight: 300;
   color: #9d9d9d;
-  white-space: nowrap;
   margin: 0;
 }
 main .counters {

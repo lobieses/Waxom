@@ -80,6 +80,16 @@
     width: 100%;
     margin: 10px auto;
   }
+  main .excellentForMobileDevices .container .phoneImage {
+    display: none;
+  }
+  main .excellentForMobileDevices .container .textBlock {
+    padding: 0 0 40px 0;
+    text-align: center;
+  }
+  main .excellentForMobileDevices .container .textBlock .features {
+    margin-left: 10%;
+  }
 }
 @media (max-width: 768px) {
   main .latestProjects p {
@@ -121,6 +131,9 @@
   main .latestProjects .projects {
     -ms-grid-columns: auto;
     grid-template-columns: auto;
+  }
+  main .excellentForMobileDevices .container .textBlock .features {
+    margin-left: 0;
   }
 }
 @media (max-width: 320px) {
