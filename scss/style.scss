@@ -592,29 +592,32 @@ main {
 
     .counters {
         background: url(../images/countersBackground.jpg) no-repeat center top/cover;
-        height: 300px;
         width: 100%;
         box-sizing: border-box;
         padding: 60px 0 30px 0;
 
         .countersContent {
             display: flex;
-            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: center;
             height: 100%;
 
             .counter {
                 position: relative;
+                flex: 0 0 calc(16.66% - 20px);
                 height: 100%;
                 text-align: center;
 
                 .numbers {
-                    @include createFont($fontMontserrat, 48px, #ffffff, 400);
+                    @include createAdaptiveFont($fontMontserrat, 48, 20, #ffffff, 400);
                     margin-top: 25px;
                 }
 
                 p {
-                    @include createFont($fontMontserrat, 14px, #c7b299, 300);
+                    @include createAdaptiveFont($fontMontserrat, 14, 8, #c7b299, 300);
                     margin-top: 20px;
+                    white-space: nowrap;
                 }
 
                 &:after {
@@ -624,7 +627,7 @@ main {
                     background-color: #ffffff;
                     display: block;
                     position: absolute;
-                    bottom: 0;
+                    bottom: -10px;
                     left: calc(50% - 16px);
                 }
             }

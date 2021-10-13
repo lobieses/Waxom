@@ -630,7 +630,6 @@ main .excellentForMobileDevices .container .textBlock .features .feature p {
 }
 main .counters {
   background: url(../images/countersBackground.jpg) no-repeat center top/cover;
-  height: 300px;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -640,28 +639,36 @@ main .counters .countersContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
 }
 main .counters .countersContent .counter {
   position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(16.66% - 20px);
+          flex: 0 0 calc(16.66% - 20px);
   height: 100%;
   text-align: center;
 }
 main .counters .countersContent .counter .numbers {
   font-family: "Montserrat", sans-serif;
-  font-size: 48px;
+  font-size: calc(20px + 28 * ((100vw - 320px) / 960));
   font-weight: 400;
   color: #ffffff;
   margin-top: 25px;
 }
 main .counters .countersContent .counter p {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: calc(8px + 6 * ((100vw - 320px) / 960));
   font-weight: 300;
   color: #c7b299;
   margin-top: 20px;
+  white-space: nowrap;
 }
 main .counters .countersContent .counter:after {
   content: "";
@@ -670,7 +677,7 @@ main .counters .countersContent .counter:after {
   background-color: #ffffff;
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   left: calc(50% - 16px);
 }
 main .recentPosts {
